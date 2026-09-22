@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFF4C2;
+            margin: 0;
+            padding: 40px;
+        }
+
+        main {
+            max-width: 500px;
+            margin: auto;
+            background-color: #FFFDF5;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #C62828;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #8F1D1D;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #E8D58A;
+            border-radius: 8px;
+            box-sizing: border-box;
+            background-color: #FFFFFF;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #C62828;
+            background-color: #FFF9DD;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .option {
+            margin: 8px 0;
+        }
+
+        .option label {
+            display: inline;
+            font-weight: normal;
+            margin: 0;
+            color: #8F1D1D;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            accent-color: #C62828;
+        }
+
+        .buttons {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        button[type="submit"] {
+            background-color: #C62828;
+            color: white;
+            padding: 11px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #A61C1C;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1>Registration Form</h1>
+
+        <form action="#" method="post">
+
+            <!-- Full Name -->
+            <label for="fullName">Full Name</label>
+            <input 
+                type="text" 
+                id="fullName" 
+                name="fullName" 
+                placeholder="Enter your full name"
+                required
+            >
+
+            <!-- Email -->
+            <label for="email">Email</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Enter your email"
+                required
+            >
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number</label>
+            <input 
+                type="text" 
+                id="phone" 
+                name="phone" 
+                placeholder="Enter your phone number"
+                required
+            >
+
+            <!-- Gender -->
+            <label>Gender</label>
+
+            <div class="option">
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+
+            <!-- Hobbies -->
+            <label>Hobbies</label>
+
+            <div class="option">
+                <input type="checkbox" id="music" name="hobbies" value="Listening Music">
+                <label for="music">Listening Music</label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="movies" name="hobbies" value="Watching Movies">
+                <label for="movies">Watching Movies</label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="manhwa" name="hobbies" value="Reading Manhwa">
+                <label for="manhwa">Reading Manhwa</label>
+            </div>
+
+            <!-- Date of Birth -->
+            <label for="birthDate">Date of Birth</label>
+            <input 
+                type="date" 
+                id="birthDate" 
+                name="birthDate"
+                required
+            >
+
+            <!-- Program of Study -->
+            <label for="program">Program of Study</label>
+            <select id="program" name="program" required>
+                <option value="">-- Select Program --</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Information Systems">Information Systems</option>
+                <option value="International Business Management">
+                    International Business Management
+                </option>
+                <option value="Marketing Communication">
+                    Marketing Communication
+                </option>
+            </select>
+
+            <!-- Address -->
+            <label for="address">Address</label>
+            <textarea 
+                id="address" 
+                name="address" 
+                rows="5" 
+                placeholder="Enter your full address"
+                required
+            ></textarea>
+
+            <!-- Submit Button -->
+            <div class="buttons">
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>
